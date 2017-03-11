@@ -1,0 +1,149 @@
+@import "./base/reset";
+
+// rewrite bootstrap
+.form-inline {
+  label {
+    min-width: 5em;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: justify;
+    vertical-align: middle;
+  }
+  .form-group {
+    margin: 5px 0;
+  }
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
+  .btn {
+    min-width: 82px;
+  }
+  .input-group-addon {
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.table {
+  & > thead > tr > th {
+    vertical-align: middle;
+    font-weight: normal;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom-width: 1px;
+    -webkit-text-stroke: .3px #000;
+  }
+  td {
+    background-color: #fff;
+    text-align: center;
+  }
+}
+nav {
+  .pagination {
+    margin: 0;
+  }
+}
+// global
+body {
+  background-color: #ebf0f6;
+
+  #header {
+    height: 80px;
+    background-color: #2f80ec;
+
+    .menubar {
+      line-height: 80px;
+
+      li {
+        float: left;
+        list-style: none;
+
+        &:not(:last-child) {
+          border-right: 1px solid #4795ff;
+        }
+        a {
+          color: #fff;
+          display: inline-block;
+          padding: 0 25px;
+
+          &:hover {
+            text-decoration: none;
+          }
+          &:active {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+          img {
+            margin-right: .5em;
+
+            &.avatar {
+              border-radius: 50%;
+              box-shadow: 0 0 5px rgba(20, 80, 160, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+  #content {
+    .wrapper {
+      padding: 20px;
+    }
+  }
+}
+// filter margin
+#content > .wrapper > .filter {
+  margin-bottom: 20px;
+}
+// charts-cards
+.charts {
+  margin-bottom: 20px;
+
+  .cards {
+    margin: 10px -8px 0 -8px;
+
+    .item {
+      float: left;
+      width: 25%;
+      padding: 8px;
+
+      > .box {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 3px rbga(0, 0, 0, 0.1);
+        padding: 20px 20px;
+
+        h5 {
+          font-size: 16px;
+          margin-top: 0;
+        }
+        .graphic {
+          display: table;
+          margin-top: 20px;
+
+          & > * {
+            display: table-cell;
+            vertical-align: middle;
+          }
+          .data {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+          }
+          .info {
+            padding-left: 20px;
+            font-size: 15px;
+
+            p {
+              margin-bottom: 0;
+
+              & + p {
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
